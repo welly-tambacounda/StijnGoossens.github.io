@@ -255,8 +255,8 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: rgb(240, 171, 0);
-  border-radius: 0.25em;
+  background: rgba(255, 255, 255, 0.5); //#F0AB00;
+  border-radius: 1em;
   padding: 1em;
   box-shadow: 0 4px 0 #bfc6cc;
 }
