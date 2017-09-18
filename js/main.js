@@ -1,13 +1,3 @@
-//var appId = 'YOUR_APP_ID';
-//var roleArn = 'YOUR_ROLE_ARN';
-var bucketName = 'aws-website-sapientes-uznt1';
-AWS.config.region = 'us-east-1';
-var bucket = new AWS.S3({
-    params: {
-        Bucket: bucketName
-    }
-});
-
 jQuery(document).ready(function($){
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
