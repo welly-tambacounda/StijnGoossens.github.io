@@ -14,23 +14,6 @@ html * {
   box-sizing: border-box;
 }
 
-body {
-  font-size: 100%;
-  font-family: "Droid Serif", serif;
-  color: #7f8c97;
-  background-color: #e9f0f5;
-}
-
-a {
-  color: #acb7c0;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
-
-img {
-  max-width: 100%;
-}
-
 .company {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
@@ -42,7 +25,7 @@ img {
 .jobrole {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  color: white;
+  color: #444444;
   margin-bottom: 10px;
 }
 
@@ -76,17 +59,7 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49;
-}
-header h1 {
-  color: black;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
+
 @media only screen and (min-width: 1170px) {
   header {
     height: 300px;
@@ -255,7 +228,7 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: rgba(255, 255, 255, 0.5); //#F0AB00;
+  background: rgba(255, 255, 255, 0.7); //#F0AB00;
   border-radius: 1em;
   padding: 1em;
   box-shadow: 0 4px 0 #bfc6cc;
