@@ -63,33 +63,96 @@ ul {
 //  padding: 0.25rem 9999rem;
 //}
 
+
+//https://bitsofco.de/holy-grail-layout-css-grid/
+
+.grid_header { 
+  grid-area: header; 
+}
+.grid_menu { 
+  grid-area: menu;
+}
+.grid_title { 
+  grid-area: title;
+  font-size: 150%;
+  font-family: 'Oswald', sans-serif;
+  color: #444444;
+  text-align: center;
+}
+.grid_box1 { 
+  grid-area: box1;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 20px;
+  font-size: 100%;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
+}
+.grid_box2 { 
+  grid-area: box2;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 20px;
+  font-size: 100%;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
+}
+.grid_box3 { 
+  grid-area: box3;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 20px;
+  font-size: 100%;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
+}
+.grid_footer { 
+  grid-area: footer; 
+  text-align: center;
+  font-size: small;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "header menu menu"
+                         "title title title"
+                         "box1 box2 box3"
+                         "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 
+                        50px
+                        1fr
+                        20px;
+    min-height: 100vh;
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-areas: "header"
+                             "menu"
+                             "title"
+                             "box1"
+                             "box2"
+                             "box3"
+                             "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 
+                            50px
+                            50px
+                            1fr
+                            1fr
+                            1fr
+                            20px;
+    }
+}
+
+
+
 /* GRID */
-.wrapper {
-        height: 100%;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 350px 350px 350px;
-        grid-template-rows: auto auto auto 1fr auto;
-    }
-
-    .sapientesheader {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        //background: -webkit-linear-gradient(-45deg, #F0AB00 0%, #F0AB00 100%);
-        //background: linear-gradient(0deg, #F0AB00 0%, #F0AB00 100%);
-    }
-
-    .title {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        //background-color: rgba(255, 255, 255, 1);
-        padding: 10px;
-        font-size: 150%;
-        font-family: 'Oswald', sans-serif;
-        color: #444444;
-        border-radius: 20px;
-        text-align: center;
-    }
     .content {
         grid-column: 1 / -1;
         grid-row: 3;
@@ -97,41 +160,4 @@ ul {
         padding: 0px;
         font-size: 100%;
     }
-    .box1 {
-        grid-column: 1 / 2;
-        grid-row: 3;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 20px;
-        font-size: 100%;
-        border-radius: 20px;
-        font-family: 'Montserrat', sans-serif; 
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);   
-    }
-    .box2 {
-        grid-column: 2 / 3;
-        grid-row: 3;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 20px;
-        font-size: 100%;      
-        border-radius: 20px;
-        font-family: 'Montserrat', sans-serif;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-      }
-    .box3 {
-        grid-column: 3 / 4;
-        grid-row: 3;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 20px;
-        font-size: 100%;
-        border-radius: 20px;
-        font-family: 'Montserrat', sans-serif;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-            }
-    .footer {
-        grid-column: 1 / -1;
-        grid-row-start: 5;
-        grid-row-end: 6;
-        //background: rgba(145, 145, 145, 0.8);
-        text-align: center;
-        font-size: small;
-    }
+
