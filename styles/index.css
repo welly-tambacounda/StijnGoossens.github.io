@@ -32,7 +32,6 @@ body.friendly .message__title {
   margin-top: 0px;
   margin-right: 20px;
   display: inline-block;
-  float:left;
   font-family: 'Orbitron', sans-serif;
   text-decoration:none;
 }
@@ -42,9 +41,9 @@ body.friendly .message__title {
   border-radius: 4px;
   font-size: 14px;
   color: #fff;
-  float:right;
+  float: right;
   font-family: 'Roboto', sans-serif;
-      list-style-type: none;
+  list-style-type: none;
 }
 
 .navbtn:hover {
@@ -147,6 +146,13 @@ ul {
                             1fr
                             1fr
                             20px;
+    }
+    .grid_header {
+      text-align: center
+    }
+    .navbtn {
+      display:inline-block;
+      float: none;
     }
 }
 
