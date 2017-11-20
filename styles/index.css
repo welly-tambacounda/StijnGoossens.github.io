@@ -16,17 +16,20 @@ html, body {
   background: -webkit-linear-gradient(-45deg, #00A54F 0%, #00A54F 100%);
   background: linear-gradient(135deg, #00A54F 0%, #00A54F 100%);
   Background-attachment:fixed;
-  height: 100%;
+  //height: 100%;
   -webkit-font-smoothing: antialiased;
-  margin: 0pt;
+}
+
+ul.products li {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 body {
-  padding: 0;
 //  display: flex;
 //  flex-direction: column;
 //  align-items: center;
-  margin:0 auto;
 }
 
 
@@ -52,6 +55,10 @@ a {
   text-decoration: underline;
 }
 
+// Product Grid
+// http://blog.teamtreehouse.com/using-inline-block-to-display-a-product-grid-view
+
+
 
 //.full-width-bar {
 //  margin: 0 -9999rem;
@@ -62,8 +69,8 @@ a {
 
 //https://bitsofco.de/holy-grail-layout-css-grid/
 
-.grid_header { 
-  grid-area: header;
+.grid_logo { 
+  grid-area: logo;
   background-color: rgb(250, 192, 32);
 }
 .grid_menu { 
@@ -74,11 +81,11 @@ a {
   grid-area: title;
   font-size: 150%;
   font-family: 'Oswald', sans-serif;
-  color: #444444;
+  color: #fff;
   text-align: center;
 }
-.grid_box1 { 
-  grid-area: box1;
+.grid_content { 
+  grid-area: content;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   margin: 10px;
@@ -86,26 +93,6 @@ a {
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif; 
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
-.grid_box2 { 
-  grid-area: box2;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  margin: 10px;
-  font-size: 100%;
-  border-radius: 20px;
-  font-family: 'Montserrat', sans-serif; 
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
-}
-.grid_box3 { 
-  grid-area: box3;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  margin: 10px;
-  font-size: 100%;
-  border-radius: 20px;
-  font-family: 'Montserrat', sans-serif; 
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
 }
 .grid_footer { 
   grid-area: footer; 
@@ -116,13 +103,13 @@ a {
 
 .grid {
     display: grid;
-    grid-template-areas: "header title title"
-                         "menu box1 box1"
-                         "menu box2 box3"
-                         "menu none none"
-                         "footer none none";
-    grid-template-columns: 255px 1fr 1fr;
-    grid-template-rows: 100px 
+    grid-template-areas: "logo title"
+                         "logo content"
+                         "menu content"
+                         "menu none"
+                         "footer none";
+    grid-template-columns: 255px 1fr;
+    grid-template-rows: 50px 
                         50px
                         auto
                         1fr
@@ -138,24 +125,23 @@ a {
 
 @media screen and (max-width: 700px) {
     .grid {
-        grid-template-areas: "header"
+        grid-template-areas: "logo"
                              "menu"
                              "title"
-                             "box1"
-                             "box2"
-                             "box3"
+                             "content"
                              "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 50px 
+        grid-template-rows: 100px 
                             50px
                             50px
                             1fr
-                            1fr
-                            1fr
-                            20px;
+                            50px;
     }
     .grid_header {
       text-align: center
+    }
+    .grid_footer { 
+      background-color: rgba(250, 192, 32, 0);
     }
     .navbtn {
       display:inline-block;
@@ -165,12 +151,5 @@ a {
 
 
 
-/* GRID */
-    .content {
-        grid-column: 1 / -1;
-        grid-row: 3;
-        //background-color: rgba(255, 255, 255, 1);
-        padding: 0px;
-        font-size: 100%;
-    }
+
 
