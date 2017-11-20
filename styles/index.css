@@ -85,7 +85,8 @@ ul.products li {
   grid-area: footer; 
   text-align: center;
   font-size: small;
-  background-color: rgb(250, 192, 32);
+  background-color: rgb(250, 192, 32, 0);
+  color: #fff
 }
 
 .grid {
@@ -94,7 +95,7 @@ ul.products li {
                          "logo content"
                          "menu content"
                          "menu none"
-                         "footer none";
+                         "menu footer";
     grid-template-columns: 255px 1fr;
     grid-template-rows: 50px 
                         50px
