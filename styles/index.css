@@ -1,10 +1,14 @@
 /* BODY */
+
+/* yellow: FAC020 - rgb(250, 192, 32)*/
+/* green: 00A54F - rgb(0, 165, 79)  */
+
 html, body {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: -webkit-linear-gradient(-45deg, #F0AB00 0%, #ef8300 100%);
-  background: linear-gradient(135deg, #F0AB00 0%, #ef8300 100%);
+  background: -webkit-linear-gradient(-45deg, #00A54F 0%, #00A54F 100%);
+  background: linear-gradient(135deg, #00A54F 0%, #00A54F 100%);
   Background-attachment:fixed;
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -19,18 +23,11 @@ body {
   margin:0 auto;
 }
 
-.sapientes__header {
-  margin-top: 15px;
-  margin-bottom: 8px; }
 
 .logo {
-  font-size: xx-large;
-  color: #fff;
-  margin-top: 10px;
-  margin-left: 20px;
-  display: inline-block;
-  font-family: 'Orbitron', sans-serif;
-  text-decoration:none;
+  display: block;
+  text-align:center;
+  background-color: rgb(250, 192, 32);
 }
 
 .navbtn {
@@ -63,10 +60,12 @@ ul {
 //https://bitsofco.de/holy-grail-layout-css-grid/
 
 .grid_header { 
-  grid-area: header; 
+  grid-area: header;
+  background-color: rgb(250, 192, 32);
 }
 .grid_menu { 
-  grid-area: menu;
+  grid-area: menu;  
+  background-color: rgb(250, 192, 32);
 }
 .grid_title { 
   grid-area: title;
@@ -83,7 +82,7 @@ ul {
   font-size: 100%;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif; 
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 .grid_box2 { 
   grid-area: box2;
@@ -109,21 +108,22 @@ ul {
   grid-area: footer; 
   text-align: center;
   font-size: small;
+  background-color: rgb(250, 192, 32);
 }
 
 .grid {
     display: grid;
-    grid-template-areas: "header menu menu"
-                         "title title title"
-                         "box1 box2 box3"
-                         "none none none"
-                         "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 
+    grid-template-areas: "header title title"
+                         "menu box1 box1"
+                         "menu box2 box3"
+                         "menu none none"
+                         "footer none none";
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: 100px 
                         50px
                         auto
                         1fr
-                        20px;
+                        50px;
     min-height: 100vh;
 }
 
