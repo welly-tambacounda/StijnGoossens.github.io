@@ -3,6 +3,12 @@
 /* yellow: FAC020 - rgb(250, 192, 32)*/
 /* green: 00A54F - rgb(0, 165, 79)  */
 
+/* https://stackoverflow.com/questions/29307357/get-rid-of-webkit-padding-start-40px */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -31,22 +37,19 @@ body {
 }
 
 .navbtn {
-  padding: 20px 15px;
-  border-radius: 4px;
+  padding: 10px;
   font-size: 14px;
   color: #fff;
-  float: right;
   font-family: 'Roboto', sans-serif;
   list-style-type: none;
 }
 
-.navbtn:hover {
-  text-decoration: underline;
+a {
+  text-decoration: none;
 }
 
-/* BUTTON LIST */
-ul {
-    margin: 0;
+.navbtn:hover {
+  text-decoration: underline;
 }
 
 
@@ -118,7 +121,7 @@ ul {
                          "menu box2 box3"
                          "menu none none"
                          "footer none none";
-    grid-template-columns: 250px 1fr 1fr;
+    grid-template-columns: 255px 1fr 1fr;
     grid-template-rows: 100px 
                         50px
                         auto
