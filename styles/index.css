@@ -20,17 +20,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-ul.products li {
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-body {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-}
 
 
 .logo {
@@ -55,19 +44,16 @@ a {
   text-decoration: underline;
 }
 
-// Product Grid
-// http://blog.teamtreehouse.com/using-inline-block-to-display-a-product-grid-view
+/* Product Grid
+/ http:blog.teamtreehouse.com/using-inline-block-to-display-a-product-grid-view */
+ul.products li {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
 
 
-
-//.full-width-bar {
-//  margin: 0 -9999rem;
-//  /* add back negative margin value */
-//  padding: 0.25rem 9999rem;
-//}
-
-
-//https://bitsofco.de/holy-grail-layout-css-grid/
+/*https://bitsofco.de/holy-grail-layout-css-grid/ */
 
 .grid_logo { 
   grid-area: logo;
@@ -83,6 +69,7 @@ a {
   font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: center;
+  margin-top: 10px;
 }
 .grid_content { 
   grid-area: content;
@@ -119,7 +106,7 @@ a {
 
 @media screen and (min-width: 1200px) {
     .grid {
-  //    grid-template-columns: 400px 400px 400px;
+  /*    grid-template-columns: 400px 400px 400px;   */
     }
   }
 
