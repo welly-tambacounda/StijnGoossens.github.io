@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 
@@ -7,46 +7,55 @@
 <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Orbitron|Roboto:400,500i" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Oswald" rel="stylesheet">
-<title>Sapientes - Contact</title>
+<title>Contact</title>
 <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 
 <body class="grid">
-  <div class="grid_header">
-   <a href="index.html" class="logo">Sapientes</a>
-  </div>
+  <div class="grid_logo">
+	 <a href="index.html" class="logo">
+	 	<img src="img/welly_logo_yellow.png" alt="Welly logo" style="width:144px;height:100px;">
+	 </a>
+	</div>
 
   <div class="grid_menu">
-    <ul style="margin-right:auto;margin-left:auto;text-align:center;">
-      <a href="contact.html"><li class="navbtn">CONTACT</li></a>
-      <a href="aboutme.html"><li class="navbtn">ABOUT ME</li></a>
-      <a href="index.html"><li class="navbtn">HOME</li></a>
-    </ul>
+    <ul style="text-align:center;margin-top: 10px;">
+      <a href="index.html"><li class="navbtn">WELLY</li></a>
+      <a href="nosproduits.html"><li class="navbtn">NOS PRODUITS</li></a>
+      <a href="ousommesnous.html"><li class="navbtn">OU SOMMES-NOUS?</li></a>
+      <a href="contact.html"><li class="navbtn">CONTACT</li></a>      
+  	</ul>
   </div>
 
   <div class="grid_title">
     Contact
   </div>
 
-    <img src="img/Dirk_Profiel_Foto.jpg" alt="" style="width:200px; display:block; margin-left:auto; margin-right:auto; border-radius: 20px;   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); ">
 
-
-  <div class="grid_box2">
-    <img src="img/Icon_Email.png" alt="" style="width:40px;">
-    dirk.van.der.massen@sapientes.be
+  <div class="grid_content">
+  <!-- Start code for the form-->
+  <form method="post" name="myemailform" action="form-to-email.php">
     <p>
-    <a href="https://www.linkedin.com/in/vandermassendirk" class=btn><img src="img/Icon_LinkedIn.png" alt="" style="width:40px;"></a>
-    LinkedIn
+      <label for='name'>Enter Name: </label><br>
+      <input type="text" name="name">
+    </p>
+    <p>
+      <label for='email'>Enter Email Address:</label><br>
+      <input type="text" name="email">
+    </p>
+    <p>
+      <label for='message'>Enter Message:</label> <br>
+      <textarea name="message"></textarea>
+    </p>
+    <input type="submit" name='submit' value="submit">
+  </form>
   </div>
 
-
-
-
   <div class="grid_footer" style="color:#444444;">
-    Website design by Sofijn Consulting Group 
+    WELLY – Banane APROVAG <br>
+	info@welly.sn –  77 888 52 63 <br>
+	Quartier Abbatoirs Lot n°5 – Tambacounda
   </div>
   
 </body>
 </html>
-
-  
