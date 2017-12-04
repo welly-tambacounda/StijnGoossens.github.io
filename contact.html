@@ -39,12 +39,13 @@
 
   <div class="grid_content" style="max-width:500px;text-align:center;">
 
-    <form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="contact">
+    <!<form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="contact">>
+    <form method="POST" action="https://phpformswallie.herokuapp.com/contact.php" class="contact">
       <input type="hidden" name="_language" value="fr">
       <input type="hidden" name="_subject" value="Message de welly.sn">
       <input type="hidden" name="_next" value="merci.html"> 
       <input type="email" name="email" placeholder="Votre email" required><br>
-      <textarea name="message" placeholder="Votre message" required></textarea><br>
+      <textarea name="comment" placeholder="Votre message" required></textarea><br>
       <button type="submit">ENVOYEZ</button>
     </form>
 
