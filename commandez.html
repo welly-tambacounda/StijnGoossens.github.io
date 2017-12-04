@@ -10,6 +10,8 @@
 <title>Commandez</title>
 <link rel="stylesheet" type="text/css" href="styles/index.css">
 <meta name="referrer" content="origin"> <! https://stackoverflow.com/questions/35236643/error-when-submitting-formspree-io-from-github-pages >
+
+
 </head>
 
 <body class="grid">
@@ -37,21 +39,23 @@
     Commandez
   </div>
 
-  <div class="grid_content">
+  <div class="grid_content" style="text-align:center;">
     <form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="commandez">
-      <input type="hidden" name="_language" value="fr">
-      <input type="hidden" name="_subject" value="Commande de welly.sn">
-      <input type="hidden" name="_next" value="merci.html"> 
-      <input type="email" name="email" placeholder="Your email">
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <select name="productlist">
+      <input type="email" name="email" placeholder="Votre email" required><br>
+
+      <div id="myDropDownListDiv"><select name="productlist">
         <option value="Bissap">Bissap</option>
         <option value="Gingembre">Gingembre</option>
         <option value="Tamarin">Tamarin</option>
         <option value="Bananes">Bananes</option>
-      </select>
-      Bissap<input type="number" name="Bissap" placeholder="0">
-      <button type="submit">Send</button>
+      </select></div>
+      <input type="number" name="quantity" placeholder="0"><br>
+
+      <div id="anotherDiv"></div><input type="number" name="quantity" placeholder="0"><br>
+
+      <div id="anotherDiv"></div><input type="number" name="quantity" placeholder="0"><br>
+
+      <button type="submit">ENVOYEZ</button>
     </form>
   </div>
 
@@ -60,6 +64,15 @@
 	info@welly.sn –  77 888 52 63 <br>
 	Quartier Abbatoirs Lot n°5 – Tambacounda
   </div>
-  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script type="text/javascript">$(document).ready(function(){
+    //copies all contents of myDropDownListDiv into anotherDiv
+    $("#anotherDiv").html($("#myDropDownListDiv").html());
+});</script>
+
 </body>
 </html>
