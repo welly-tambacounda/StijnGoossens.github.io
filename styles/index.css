@@ -175,14 +175,12 @@ input[type=checkbox]:checked ~ #menu{
 
 @media screen and (max-width: 700px) {
     .grid {
-        grid-template-areas: "logo"
-                             "menu"
-                             "title"
-                             "content"
-                             "footer";
-        grid-template-columns: 100%;
-        grid-template-rows: 105px 
-                            50px
+        grid-template-areas: "logo menu"
+                             "title title"
+                             "content content"
+                             "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 110px
                             50px
                             1fr
                             50px;
