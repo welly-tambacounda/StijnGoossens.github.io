@@ -146,15 +146,14 @@ form.contact button:hover {
 
 /*Style 'show menu' label button and hide it by default*/
 .show-menu {
-    text-align: center;
+    text-align: right;
     padding: 5px 0;
     color: #00A54F;
-    background: rgba(255, 209, 84, 1);
-    width: 150px;
-    margin:auto;
-    margin-top:5px;
-    border-radius: 20px;
+    margin:5px;
     display: none;
+}
+.show-menu:hover {
+  cursor: pointer;
 }
 /*Hide checkbox*/
 input[type=checkbox]{
