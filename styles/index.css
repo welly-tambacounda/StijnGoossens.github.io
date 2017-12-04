@@ -17,7 +17,6 @@ html, body {
   background: -webkit-linear-gradient(-45deg, #00A54F 0%, #00A54F 100%);
   background: linear-gradient(135deg, #00A54F 0%, #00A54F 100%);
   Background-attachment:fixed;
-  //height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -56,19 +55,14 @@ ul.products li {
 }
 
 /* Contact Form */
-form {
-  text-align: center;
-}
 form.contact input {
-  max-width: 100%;
-  padding: 10px 10px;
-  margin: 8px 0;
+  padding: 7px 7px;
+  margin-bottom: 8px;
   font-family: 'Roboto', sans-serif;
 }
 form.contact textarea {
-  max-width: 100%;
-  padding: 10px 10px;
-  margin: 8px 0;
+  padding: 7px 7px;
+  margin-bottom: 8px;
   font-family: 'Roboto', sans-serif;
   resize: vertical;
 }
@@ -76,7 +70,7 @@ form.contact button {
   background-color: #FAC020;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -114,7 +108,6 @@ form.contact button:hover {
   margin:auto;
   margin-top:10px;
   margin-bottom:10px;
-  font-size: 100%;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif; 
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
@@ -214,17 +207,5 @@ input[type=checkbox]:checked ~ #menu{
         position:relative;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
