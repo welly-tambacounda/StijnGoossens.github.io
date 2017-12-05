@@ -40,23 +40,31 @@
   </div>
 
   <div class="grid_content" style="text-align:center;">
-    <form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="commandez">
+    <form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="commandez" id="orderform">
       <input type="email" name="email" placeholder="Votre email" required><br>
 
-      <div id="myDropDownListDiv"><select name="productlist">
-        <option value="Bissap">Bissap</option>
-        <option value="Gingembre">Gingembre</option>
-        <option value="Tamarin">Tamarin</option>
-        <option value="Bananes">Bananes</option>
-      </select></div>
-      <input type="number" name="quantity" placeholder="0"><br>
+      <button id="button" onlick="duplicate()">Add product line</button>
 
-      <div id="anotherDiv"></div><input type="number" name="quantity" placeholder="0"><br>
+      <div id="OrderLine0">
+          <select name="productlist" id="productlist">
+            <option value="None"        >   -- choisissez un produit --   </option>
+            <option value="JusBissap"   >   Jus de Bissap (250 ml)        </option>
+            <option value="JusGingembre">   Jus de Gingembre (250 ml)     </option>
+            <option value="JusTamarin"  >   Jus de Tamarin (250 ml)       </option>
+            <option value="SiropBissap" >   Sirop de Bissap (1 litre)     </option>
+          </select>
+          <input name="qty" id="qty" placeholder="0">
+          <div id="ol_unit_price">-</div> FCFA
+          <div id="ol_total_price">-</div> FCFA
+          <br><br>
+      </div>
+      
+      
 
-      <div id="anotherDiv"></div><input type="number" name="quantity" placeholder="0"><br>
-
-      <button type="submit">ENVOYEZ</button>
+      
     </form>
+    <div id="totalPrice">---</div> FCFA<br>
+    <button type="submit">ENVOYEZ</button>
   </div>
 
   <div class="grid_footer" style="color:#444444;">
@@ -69,10 +77,53 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
-<script type="text/javascript">$(document).ready(function(){
-    //copies all contents of myDropDownListDiv into anotherDiv
-    $("#anotherDiv").html($("#myDropDownListDiv").html());
-});</script>
+
+<script type="text/javascript">
+  
+$('#productlist').change(function(){
+      var product_prices= new Array();
+        product_prices["None"]=0;
+        product_prices["JusBissap"]=100;
+        product_prices["JusGingembre"]=100;
+        product_prices["JusTamarin"]=100;
+        product_prices["SiropBissap"]=1700;
+      
+      product = $(this).val();
+      price = product_prices[product];
+
+      $("#ol_unit_price").text(price);
+      
+      $("#txt_name").trigger("keyup");
+});
+
+$("#qty").on("keyup change", function() {
+     var value = this.value;
+     var valuemath = value * price;
+     $("#ol_unit_price").text(price);  
+     $("#ol_total_price").text(valuemath);
+
+     var sum = 0.0;
+      $('#ol_total_price').each(function() {
+        sum += parseFloat($(this).text());
+      });
+      $("#totalPrice").text(sum);
+});
+
+
+
+
+document.getElementById('button').onclick = duplicate;
+
+var i = 0;
+var original = document.getElementById('OrderLine0');
+
+function duplicate() {
+    var clone = original.cloneNode(true); // "deep" clone
+    clone.id = "OrderLine" + ++i; // there can only be one element with an ID
+    original.parentNode.appendChild(clone);
+}
+
+</script>
 
 </body>
 </html>
