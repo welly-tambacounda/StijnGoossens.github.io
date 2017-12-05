@@ -40,35 +40,32 @@
   </div>
 
   <div class="grid_content" style="text-align:center;">
-    <form method="POST" action="https://formspree.io/tambawallie@gmail.com" class="commandez" id="orderform">
+    <form method="POST" action="https://phpformswallie.herokuapp.com/orderplacement.php" class="commandez">
       <input type="email" name="email" placeholder="Votre email" required><br>
 
       <button id="button" onlick="duplicate()">Add product line</button>
 
       <div id="OrderLine0">
-          <select name="productlist" id="productlist">
+          <select name="productlist0" id="productlist">
             <option value="None"        >   -- choisissez un produit --   </option>
             <option value="JusBissap"   >   Jus de Bissap (250 ml)        </option>
             <option value="JusGingembre">   Jus de Gingembre (250 ml)     </option>
             <option value="JusTamarin"  >   Jus de Tamarin (250 ml)       </option>
             <option value="SiropBissap" >   Sirop de Bissap (1 litre)     </option>
           </select>
-          <input name="qty" id="qty" placeholder="0">
+          <input name="qty0" id="qty" placeholder="0">
           <div id="ol_unit_price">-</div> FCFA
           <div id="ol_total_price">-</div> FCFA
           <br><br>
       </div>
-      
-      
-
-      
+           
     </form>
     <div id="totalPrice">---</div> FCFA<br>
     <button type="submit">ENVOYEZ</button>
   </div>
 
   <div class="grid_footer" style="color:#444444;">
-    WELLY – Banane APROVAG <br>
+  WELLY – Banane APROVAG <br>
 	info@welly.sn –  77 888 52 63 <br>
 	Quartier Abbatoirs Lot n°5 – Tambacounda
   </div>
@@ -120,6 +117,8 @@ var original = document.getElementById('OrderLine0');
 function duplicate() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "OrderLine" + ++i; // there can only be one element with an ID
+    var qtyinput = $("#OrderLine0 :input");
+    qtyinput.name = "Qty" + ++i;
     original.parentNode.appendChild(clone);
 }
 
