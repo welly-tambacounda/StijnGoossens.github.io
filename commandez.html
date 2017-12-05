@@ -120,9 +120,9 @@ function duplicate() {
     clone.id = "OrderLine" + ++i; // there can only be one element with an ID
     
     var productlist = $("#clone.id :select");
-    productlist.name = "Qty" + ++i;
+    productlist.name = "productlist" + ++i;
     var qtyinput = $("#OrderLine0 :input");
-    qtyinput.name = "Qty" + ++i;
+    qtyinput.name = "qty" + ++i;
     
     original.parentNode.appendChild(clone);
 }
