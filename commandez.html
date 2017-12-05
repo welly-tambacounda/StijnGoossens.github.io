@@ -43,7 +43,7 @@
     <form method="POST" action="https://phpformswallie.herokuapp.com/orderplacement.php" class="commandez">
       <input type="email" name="email" placeholder="Votre email" required><br>
 
-      <button id="button" onlick="duplicate()">Add product line</button>
+      <button id="addlinebutton" onlick="duplicate()">Add product line</button>
       <button type="submit">ENVOYEZ</button>
 
       <div id="OrderLine0">
@@ -61,8 +61,8 @@
       </div>
       
     </form>
-    <div id="totalPrice">---</div> FCFA<br>
-    
+
+    <div id="totalPrice">---</div> FCFA<br>  
   </div>
 
   <div class="grid_footer" style="color:#444444;">
@@ -74,7 +74,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
 
 <script type="text/javascript">
   
@@ -108,9 +107,9 @@ $("#qty").on("keyup change", function() {
 });
 
 
+/*https://stackoverflow.com/questions/34541528/jquery-automatically-add-1-to-the-radio-button-name-when-the-div-containing-the*/
 
-
-document.getElementById('button').onclick = duplicate;
+document.getElementById('addlinebutton').onclick = duplicate;
 
 var i = 0;
 var original = document.getElementById('OrderLine0');
@@ -119,12 +118,9 @@ function duplicate() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "OrderLine" + ++i; // there can only be one element with an ID
     
-    var productlist = $("#clone.id :select");
-    productlist.name = "productlist" + ++i;
-    var qtyinput = $("#OrderLine0 :input");
-    qtyinput.name = "qty" + ++i;
-    
     original.parentNode.appendChild(clone);
+    $("#" + clone.id).find(".productlist0 select").each(function() { this.name = this.name + i });
+    $("#" + clone.id).find(".qty0 input").each(function() { this.name = this.name + i });
 }
 
 </script>
