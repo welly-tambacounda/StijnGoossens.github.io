@@ -118,8 +118,12 @@ var original = document.getElementById('OrderLine0');
 function duplicate() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "OrderLine" + ++i; // there can only be one element with an ID
+    
+    var productlist = $("#clone.id :select");
+    productlist.name = "Qty" + ++i;
     var qtyinput = $("#OrderLine0 :input");
     qtyinput.name = "Qty" + ++i;
+    
     original.parentNode.appendChild(clone);
 }
 
