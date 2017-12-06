@@ -75,6 +75,7 @@ form input {
   margin-bottom: 8px;
   font-family: 'Roboto', sans-serif;
   display:inline-block;
+  width:250px;
 }
 form textarea {
   padding: 7px 7px;

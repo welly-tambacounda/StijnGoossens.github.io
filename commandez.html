@@ -43,8 +43,6 @@
     <form method="POST" action="https://phpformswallie.herokuapp.com/orderplacement.php" class="commandez">
       <input type="email" name="email" placeholder="Votre email"  required>
 
-      
-
       <div id="orderlinecontainer">
         <div id="OrderLine1">
           <select name="productlist1" id="productlist">
@@ -60,7 +58,7 @@
             <option value="Sirop_Gingembre"   >   Sirop de Gingembre (1 litre)    </option>
             <option value="Sirop_Pamplemousse">   Sirop de Pamplemousse (1 litre) </option>
           </select>
-          <input type="number" name="qty1" id="qty" placeholder="0">
+          <input type="number" name="qty1" id="qty" placeholder="0" min="0">
         </div>
       </div>
 
