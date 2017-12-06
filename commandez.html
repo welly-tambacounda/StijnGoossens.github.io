@@ -46,17 +46,17 @@
       <button id="addlinebutton" onlick="duplicate()">Add product line</button>
       <button type="submit">ENVOYEZ</button>
 
-      <div id="OrderLine0">
-          <select name="productlist0" id="productlist">
+      <div id="OrderLine1">
+          <select name="productlist1" id="productlist">
             <option value="None"        >   -- choisissez un produit --   </option>
             <option value="JusBissap"   >   Jus de Bissap (250 ml)        </option>
             <option value="JusGingembre">   Jus de Gingembre (250 ml)     </option>
             <option value="JusTamarin"  >   Jus de Tamarin (250 ml)       </option>
             <option value="SiropBissap" >   Sirop de Bissap (1 litre)     </option>
           </select>
-          <input name="qty0" id="qty" placeholder="0">
-          <div id="ol_unit_price">-</div> FCFA
-          <div id="ol_total_price">-</div> FCFA
+          <input type="number" name="qty1" id="qty" placeholder="0">
+          <div id="ol_unit_price" style="display:inline-block;">-</div> FCFA
+          <div id="ol_total_price" style="display:inline-block;">-</div> FCFA
           <br><br>
       </div>
       
@@ -108,19 +108,21 @@ $("#qty").on("keyup change", function() {
 
 
 /*https://stackoverflow.com/questions/34541528/jquery-automatically-add-1-to-the-radio-button-name-when-the-div-containing-the*/
+/*https://jsfiddle.net/qdryvgw7/*/
 
 document.getElementById('addlinebutton').onclick = duplicate;
 
-var i = 0;
-var original = document.getElementById('OrderLine0');
+var i = 1;
+var original = document.getElementById('OrderLine1');
 
 function duplicate() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "OrderLine" + ++i; // there can only be one element with an ID
     
     original.parentNode.appendChild(clone);
-    $("#" + clone.id).find(".productlist0 select").each(function() { this.name = this.name + i });
-    $("#" + clone.id).find(".qty0 input").each(function() { this.name = this.name + i });
+
+    $("#" + clone.id).find("select").each(function() { this.name = "productlist" + i });
+    $("#" + clone.id).find("input").each(function() { this.name = "qty" + i });
 }
 
 </script>
