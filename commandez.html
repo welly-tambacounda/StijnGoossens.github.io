@@ -41,24 +41,34 @@
 
   <div class="grid_content" style="text-align:center;">
     <form method="POST" action="https://phpformswallie.herokuapp.com/orderplacement.php" class="commandez">
-      <input type="email" name="email" placeholder="Votre email" required><br>
+      <input type="email" name="email" placeholder="Votre email"  required>
 
-      <button id="addlinebutton" onlick="duplicate()">Add product line</button>
-      <button type="submit">ENVOYEZ</button>
+      
 
-      <div id="OrderLine1">
+      <div id="orderlinecontainer">
+        <div id="OrderLine1">
           <select name="productlist1" id="productlist">
-            <option value="None"        >   -- choisissez un produit --   </option>
-            <option value="Jus_Bissap"   >   Jus de Bissap (250 ml)        </option>
-            <option value="Jus_Gingembre">   Jus de Gingembre (250 ml)     </option>
-            <option value="Jus_Tamarin"  >   Jus de Tamarin (250 ml)       </option>
-            <option value="Sirop_Bissap" >   Sirop de Bissap (1 litre)     </option>
+            <option value="None"         >   -- choisissez un produit --   </option>
+            <option value="Jus_Bissap"   >   Jus de Bissap (200 ml)        </option>
+            <option value="Jus_Bouye"    >   Jus de Bouye (200 ml)         </option>
+            <option value="Jus_Ditax"    >   Jus de Ditax (200 ml)         </option>
+            <option value="Jus_Gingembre">   Jus de Gingembre (200 ml)     </option>
+            <option value="Jus_Tamarin"  >   Jus de Tamarin (200 ml)       </option>
+            <option value="Sirop_Bissap"      >   Sirop de Bissap (1 litre)       </option>
+            <option value="Sirop_Brigardier"  >   Sirop de Brigardier (1 litre)   </option>
+            <option value="Sirop_Citron"      >   Sirop de Citron (1 litre)       </option>
+            <option value="Sirop_Gingembre"   >   Sirop de Gingembre (1 litre)    </option>
+            <option value="Sirop_Pamplemousse">   Sirop de Pamplemousse (1 litre) </option>
           </select>
           <input type="number" name="qty1" id="qty" placeholder="0">
-          <br><br>
+        </div>
       </div>
+
+      <button type="button" id="addlinebutton" onlick="duplicate()">Ajoutez une ligne</button>
+      <button type="submit" style="display:inline-block;">ENVOYEZ LA COMMANDE</button>
       
     </form>  
+    
   </div>
 
   <div class="grid_footer" style="color:#444444;">
@@ -70,9 +80,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
 <script type="text/javascript">
-  
 /*https://stackoverflow.com/questions/34541528/jquery-automatically-add-1-to-the-radio-button-name-when-the-div-containing-the*/
 /*https://jsfiddle.net/qdryvgw7/*/
 
@@ -90,7 +98,6 @@ function duplicate() {
     $("#" + clone.id).find("select").each(function() { this.name = "productlist" + i });
     $("#" + clone.id).find("input").each(function() { this.name = "qty" + i });
 }
-
 </script>
 
 </body>

@@ -74,6 +74,7 @@ form input {
   padding: 7px 7px;
   margin-bottom: 8px;
   font-family: 'Roboto', sans-serif;
+  display:inline-block;
 }
 form textarea {
   padding: 7px 7px;
@@ -89,7 +90,7 @@ form input[type=number] {
 }
 
 form select{
-  width:200px;
+  width:250px;
   padding: 7px 7px;
   text-align:center;
   margin-bottom: 8px;
