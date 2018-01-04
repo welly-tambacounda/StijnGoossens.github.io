@@ -39,19 +39,21 @@
     Commandez
   </div>
 
-  <div class="grid_content" style="text-align:center;">
+  <div class="grid_content" style="text-align:center;max-width:400px;">
     <form method="POST" action="https://phpformswallie.herokuapp.com/orderplacement.php" class="commandez">
-      <input type="email" name="email" placeholder="Votre email"  required>
+      <input type="name" name="prénom" placeholder="Prénom" required>
+      <input type="name" name="nomdefamille" placeholder="Nom de famille" required>
+      <input type="email" name="email" placeholder="Votre email" required>
 
       <div id="orderlinecontainer">
         <div id="OrderLine1">
           <select name="productlist1" id="productlist">
-            <option value="None"         >   -- choisissez un produit --   </option>
-            <option value="Jus_Bissap"   >   Jus de Bissap (200 ml)        </option>
-            <option value="Jus_Bouye"    >   Jus de Bouye (200 ml)         </option>
-            <option value="Jus_Ditax"    >   Jus de Ditax (200 ml)         </option>
-            <option value="Jus_Gingembre">   Jus de Gingembre (200 ml)     </option>
-            <option value="Jus_Tamarin"  >   Jus de Tamarin (200 ml)       </option>
+            <option value="None"              >   -- choisissez un produit --     </option>
+            <option value="Jus_Bissap"        >   Jus de Bissap (200 ml)          </option>
+            <option value="Jus_Bouye"         >   Jus de Bouye (200 ml)           </option>
+            <option value="Jus_Ditax"         >   Jus de Ditax (200 ml)           </option>
+            <option value="Jus_Gingembre"     >   Jus de Gingembre (200 ml)       </option>
+            <option value="Jus_Tamarin"       >   Jus de Tamarin (200 ml)         </option>
             <option value="Sirop_Bissap"      >   Sirop de Bissap (1 litre)       </option>
             <option value="Sirop_Brigardier"  >   Sirop de Brigardier (1 litre)   </option>
             <option value="Sirop_Citron"      >   Sirop de Citron (1 litre)       </option>
@@ -63,10 +65,13 @@
       </div>
 
       <button type="button" id="addlinebutton" onlick="duplicate()">Ajoutez une ligne</button>
-      <button type="submit" style="display:inline-block;">ENVOYEZ LA COMMANDE</button>
+      <button type="submit" style="display:inline-block;">ENVOYEZ LA COMMANDE *</button>
       
     </form>  
     
+    <br>
+    <p style="font-size:small;">* Vous seriez contacter par notre département des ventes avec un prix et une demande de confirmation.</p>
+
   </div>
 
   <div class="grid_footer" style="color:#444444;">
